@@ -1,7 +1,7 @@
 # For Emacs: -*- mode:cperl; mode:folding; -*-
 
 package Lingua::JPN::Word2Num;
-# ABSTRACT: Lingua::JPN::Word2Num is module for converting text containing number representation in Japanese back into number. Converts whole numbers from 0 up to 999 999 999 999.
+# ABSTRACT: Word 2 number conversion in JPN.
 
 # {{{ use block
 #
@@ -14,10 +14,9 @@ use Parse::RecDescent;
 # }}}
 # {{{ variable declarations
 
-my($ver)      = ('$Rev: 440 $' =~ m{(\d+)}xms);
-our $VERSION = $ver / 10_000;
+our $VERSION = 0.0577;
 our $INFO    = {
-    rev  => '$Rev: 440 $',
+    rev  => '$Rev: 577 $',
 };
 
 my $parser = ja_numerals();
@@ -157,12 +156,12 @@ Lingua::JPN::Word2Num
 
 =head1 VERSION
 
-version 0.044
+version 0.0577
 
 text to positive number convertor for Japanese.
 Input text must be encoded in utf-8.
 
-=head2 $Rev: 440 $
+=head2 $Rev: 577 $
 
 ISO 639-3 namespace.
 
@@ -175,6 +174,8 @@ ISO 639-3 namespace.
  print defined($num) ? $num : "sorry, can't convert this text into number.";
 
 =head1 DESCRIPTION
+
+Word 2 number conversion in JPN.
 
 Lingua::JPN::Word2Num is module for converting text containing number
 representation in Japanese back into number. Converts whole numbers from 0 up
